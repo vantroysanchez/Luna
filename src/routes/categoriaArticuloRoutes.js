@@ -1,6 +1,5 @@
 import express from 'express';
-import userRoutes from './userRoutes.js';
-import categoriaArticuloRoutes from './categoriaArticuloRoutes.js'
+import categoriaArticuloController from '../controllers/categoriaArticuloController.js'
 
 const router = express.Router();
 
@@ -105,7 +104,10 @@ const router = express.Router();
  *         description: The categoriaArticulo was not found
  */
 
-router.use('/', userRoutes);
-router.use('/', categoriaArticuloRoutes);
+router.get('/categoriaArticulo', categoriaArticuloController.getAll);
+router.get('/categoriaArticulo/:id', categoriaArticuloController.getById);
+router.post('/categoriaArticulo', categoriaArticuloController.create);
+router.put('/categoriaArticulo/:id', categoriaArticuloController.update);
+router.delete('/categoriaArticulo/:id', categoriaArticuloController.remove);
 
 export default router;

@@ -1,11 +1,16 @@
 {
   "development": {
-    "username": "root",
+    "username": "sa",
     "password": "A123456*",
-    "database": "dbLaboratroy",
+    "database": "dbLuna",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 3308
+    "dialect": "mssql",
+    "port": 1434,
+    "dialectOptions": {
+      "options": {
+        "createDatabaseIfNotExists": true
+      }
+    }
   },
   "test": {
     "username": "root",

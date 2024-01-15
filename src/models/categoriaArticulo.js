@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../sequelize';
+import sequelize from '../contexts/mssql-sequelize.js';
 
 class CategoriaArticulo extends Model {}
 
@@ -20,6 +20,7 @@ CategoriaArticulo.init({
 }, {
   sequelize,
   modelName: 'CategoriaArticulo',
+  freezeTableName: true
 });
 
 export default CategoriaArticulo;
