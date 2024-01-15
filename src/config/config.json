@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "A123456*",
+    "database": "dbLuna",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": 1434,
+    "dialectOptions": {
+      "options": {
+        "createDatabaseIfNotExists": true
+      }
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
