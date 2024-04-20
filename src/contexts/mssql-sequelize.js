@@ -1,8 +1,14 @@
 import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize('dbLuna', 'sa', 'A123456*', {
+const sequelize = new Sequelize('dbLuna', 'sa', 'Aa123456*', {
   host: 'localhost',
-  dialect: 'mssql'
+  dialect: 'mssql',
+  timezone: false,
+  dialectOptions: {
+    options: {
+      useUTC: true,
+    }
+  }
 });
 
 export default sequelize;

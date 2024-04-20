@@ -25,10 +25,18 @@ Articulo.init({
     type: DataTypes.INTEGER,
     allowNull: false,
     defaultValue: 0,
-  }
+  },
+  usuarioModificacion: {
+    type: DataTypes.STRING,
+  },
+  fechaCreacion: {
+    type: DataTypes.STRING,
+  },
 }, {
   sequelize,
+  timestamps: false,
   modelName: 'Articulo',
+  freezeTableName: true
 });
 
 Articulo.belongsTo(CategoriaArticulo, { foreignKey: 'categoriaId' });

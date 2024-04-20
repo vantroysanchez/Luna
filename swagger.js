@@ -17,8 +17,11 @@ const options = {
             id: { type: 'integer' },
             nombre: { type: 'string' },
             descripcion: { type: 'string' },
-            createdAt: { type: 'string', format: 'date-time' },
-            updatedAt: { type: 'string', format: 'date-time' }
+            usuarioModificacion: { type: 'string' },
+            fechaCreacion: {
+              type: "string",
+              format: "date-time" 
+            },
           },
         },
       },

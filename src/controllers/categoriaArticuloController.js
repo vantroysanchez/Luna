@@ -31,7 +31,7 @@ const getAll = async (req, res) => {
   const create = async (req, res) => {
     try {
       const model = req.body;
-      console.log(req);
+      console.log(req.body);
       const data = await Service.create(model);
       res.json(data);
     } catch (error) {

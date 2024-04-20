@@ -17,8 +17,15 @@ CategoriaArticulo.init({
   descripcion: {
     type: DataTypes.TEXT,
   },
+  usuarioModificacion: {
+    type: DataTypes.STRING,
+  },
+  fechaCreacion: {
+    type: DataTypes.STRING,
+  },
 }, {
   sequelize,
+  timestamps: false,
   modelName: 'CategoriaArticulo',
   freezeTableName: true
 });
